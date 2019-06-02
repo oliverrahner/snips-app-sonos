@@ -355,15 +355,19 @@ if __name__ == "__main__":
 
         h \
             .subscribe_session_started(hotword_detected_callback) \
-            .subscribe_intent("playMusic4", playMusic_callback) \
-            .subscribe_intent("volumeUp4", volumeUp_callback) \
-            .subscribe_intent("volumeDown4", volumeDown_callback) \
-            .subscribe_intent("volumeSet4", volumeSet_callback) \
-            .subscribe_intent("muteSound4", mute_callback) \
-            .subscribe_intent("resumeMusic4", resumeMusic_callback) \
-            .subscribe_intent("speakerInterrupt4", speakerInterrupt_callback) \
-            .subscribe_intent("nextSong4", nextSong_callback) \
-            .subscribe_intent("previousSong4", previousSong_callback) \
-            .subscribe_intent("getInfos4", getInfos_callback) \
+            #.subscribe_intent("playMusic4", playMusic_callback) \
+            .subscribe_intent("playAlbum", playMusic_callback) \
+            .subscribe_intent("playPlaylist", playMusic_callback) \
+            .subscribe_intent("playSong", playMusic_callback) \
+            .subscribe_intent("playArtist", playMusic_callback) \
+            .subscribe_intent("volumeUp", volumeUp_callback) \
+            .subscribe_intent("volumeDown", volumeDown_callback) \
+            .subscribe_intent("volumeSet", volumeSet_callback) \
+            #.subscribe_intent("muteSound4", mute_callback) \
+            .subscribe_intent("resumeMusic", resumeMusic_callback) \
+            .subscribe_intent("speakerInterrupt", speakerInterrupt_callback) \
+            .subscribe_intent("nextSong", nextSong_callback) \
+            .subscribe_intent("previousSong", previousSong_callback) \
+            .subscribe_intent("getInfos", getInfos_callback) \
             .subscribe_session_ended(session_ended_callback) \
             .loop_forever()
