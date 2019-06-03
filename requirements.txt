@@ -1,1 +1,6 @@
--r requirements/prod.txt
+apiwrapper
+hermes_python
+requests
+paho-mqtt
+requests_futures
+flask
