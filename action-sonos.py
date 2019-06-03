@@ -355,7 +355,6 @@ if __name__ == "__main__":
 
         h \
             .subscribe_session_started(hotword_detected_callback) \
-            #.subscribe_intent("playMusic4", playMusic_callback) \
             .subscribe_intent("playAlbum", playMusic_callback) \
             .subscribe_intent("playPlaylist", playMusic_callback) \
             .subscribe_intent("playSong", playMusic_callback) \
@@ -363,7 +362,6 @@ if __name__ == "__main__":
             .subscribe_intent("volumeUp", volumeUp_callback) \
             .subscribe_intent("volumeDown", volumeDown_callback) \
             .subscribe_intent("volumeSet", volumeSet_callback) \
-            #.subscribe_intent("muteSound4", mute_callback) \
             .subscribe_intent("resumeMusic", resumeMusic_callback) \
             .subscribe_intent("speakerInterrupt", speakerInterrupt_callback) \
             .subscribe_intent("nextSong", nextSong_callback) \
