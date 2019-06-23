@@ -1,16 +1,15 @@
 [global]
-log_level=debug
-music_provider=spotify
-language=fr
-hostname=localhost
 node_device_transport_control_host=localhost
 node_device_transport_control_port=5005
-node_device_discovery_control_host=localhost
-node_device_discovery_control_port=5005
+node_device_discovery_host=localhost
+node_device_discovery_port=5005
 node_music_playback_host=localhost
 node_music_playback_port=5005
+hostname=localhost
+music_provider=spotify
+language=en
+log_level=debug
 
 [secret]
 client_id=
 client_secret=
-refresh_token=

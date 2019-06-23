@@ -109,3 +109,5 @@ temp/
 .AppleDouble/
 Makefile
 *.swp
+
+config.ini

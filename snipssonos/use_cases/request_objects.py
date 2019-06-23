@@ -137,7 +137,7 @@ class PlayTrackRequestObject(ValidRequestObject):
     def track_name(self, track_name):
         invalid_request_object = InvalidRequestObject()
 
-        if isinstance(track_name, str):
+        if isinstance(track_name, basestring):
             self._track_name = track_name
         else:
             invalid_request_object.add_error('track_name', 'is missing')
@@ -171,7 +171,7 @@ class PlayArtistRequestObject(ValidRequestObject):
     def artist_name(self, artist_name):
         invalid_request = InvalidRequestObject()
 
-        if isinstance(artist_name, str):
+        if isinstance(artist_name, basestring):
             self._artist_name = artist_name
 
         else:
@@ -205,7 +205,7 @@ class PlayPlaylistRequestObject(ValidRequestObject):
     def playlist_name(self, playlist_name):
         invalid_request = InvalidRequestObject()
 
-        if isinstance(playlist_name, str):
+        if isinstance(playlist_name, basestring):
             self._playlist_name = playlist_name
         else:
             invalid_request.add_error('playlist_name', 'is missing')
@@ -239,7 +239,7 @@ class PlayAlbumRequestObject(ValidRequestObject):
     def album_name(self, album_name):
         invalid_request = InvalidRequestObject()
 
-        if isinstance(album_name, str):
+        if isinstance(album_name, basestring):
             self._album_name = album_name
         else:
             invalid_request.add_error('album_name', 'is missing')
@@ -307,7 +307,7 @@ class InjectEntitiesRequestObject(ValidRequestObject):
             raise RequestObjectInitializationException(invalid_request)
 
     def entity_name_validation(self, entity_name, invalid_request):
-        if not isinstance(entity_name, str):
+        if not isinstance(entity_name, basestring):
             invalid_request.add_error('entity name {} in entities_type'.format(entity_name),
                                       'has to be a dictionary')
         if entity_name not in self.VALID_ENTITY_NAMES:
@@ -319,7 +319,7 @@ class InjectEntitiesRequestObject(ValidRequestObject):
 
     def entity_slot_name_validation(self, entity_slot_name, invalid_request):
         # TODO once entity names are set in stone figure validation here
-        if not isinstance(entity_slot_name, str):
+        if not isinstance(entity_slot_name, basestring):
             invalid_request.add_error('entity slot name {} in entities'.format(entity_slot_name),
                                       'has to be a string')
         return invalid_request
