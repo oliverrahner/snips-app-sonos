@@ -83,14 +83,8 @@ if __name__ == "__main__":
 
     entities_injection_service = EntitiesInjectionService(HOSTNAME)
 
-    if "--daemon" in sys.argv:
-        starttime = time.time()
-        while True:
-            response = perform_injection()
-            report_injection_results(response)
-            time.sleep(SECONDS_IN_A_DAY - ((time.time() - starttime) % SECONDS_IN_A_DAY))
-    else:
+    starttime = time.time()
+    while True:
         response = perform_injection()
         report_injection_results(response)
-
-
+        time.sleep(SECONDS_IN_A_DAY - ((time.time() - starttime) % SECONDS_IN_A_DAY))
